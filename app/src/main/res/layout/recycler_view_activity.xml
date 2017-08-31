@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Set fastScrollEnabled to false here to avoid using the real support library FastScroll
+implementation. In HackRecyclerView we create our own fast scroller instead -->
+<ca.rmen.recyclerviewbug.HackRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/recycler_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:fastScrollEnabled="true"
+    app:fastScrollEnabled="false"
     app:fastScrollHorizontalThumbDrawable="@drawable/thumb"
     app:fastScrollHorizontalTrackDrawable="@android:color/transparent"
     app:fastScrollVerticalThumbDrawable="@drawable/thumb"
     app:fastScrollVerticalTrackDrawable="@android:color/transparent">
-</android.support.v7.widget.RecyclerView>
+</ca.rmen.recyclerviewbug.HackRecyclerView>
